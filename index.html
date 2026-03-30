@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kirish | Ro'yxatdan o'tish</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <div class="bg-shapes">
+    <div class="shape s1"></div>
+    <div class="shape s2"></div>
+    <div class="shape s3"></div>
+  </div>
+
+  <div class="container">
+    <!-- REGISTER CARD -->
+    <div class="card" id="registerCard">
+      <div class="card-label">Yangi hisob</div>
+      <h1 class="card-title">Ro'yxatdan<br/>o'tish</h1>
+
+      <div class="input-group">
+        <span class="input-icon">👤</span>
+        <input type="text" id="regName" placeholder="Ismingiz" autocomplete="off"/>
+      </div>
+      <div class="input-group">
+        <span class="input-icon">🔑</span>
+        <input type="password" id="regPassword" placeholder="Parol"/>
+        <span class="eye-toggle" onclick="togglePass('regPassword', this)">👁</span>
+      </div>
+
+      <div id="regMsg" class="msg"></div>
+
+      <button class="btn btn-primary" onclick="register()">
+        <span>Ro'yxatdan o'tish</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <div class="divider">
+      <div class="divider-line"></div>
+      <span>yoki</span>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- LOGIN CARD -->
+    <div class="card" id="loginCard">
+      <div class="card-label">Xush kelibsiz</div>
+      <h1 class="card-title">Kirish</h1>
+
+      <div class="input-group">
+        <span class="input-icon">👤</span>
+        <input type="text" id="loginName" placeholder="Ismingiz" autocomplete="off"/>
+      </div>
+      <div class="input-group">
+        <span class="input-icon">🔑</span>
+        <input type="password" id="loginPassword" placeholder="Parol"/>
+        <span class="eye-toggle" onclick="togglePass('loginPassword', this)">👁</span>
+      </div>
+
+      <div id="loginMsg" class="msg"></div>
+
+      <button class="btn btn-secondary" onclick="login()">
+        <span>Kirish</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
